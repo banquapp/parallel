@@ -12,7 +12,7 @@
  */
 function processInParallel(iterableInput, concurrentTasksLimit, action) {
 	if (!iterableInput || typeof iterableInput.next !== 'function')
-		throw new TypeError('iterableInput must be an Interable Object');
+		throw new TypeError('iterableInput must be an Iterable Object');
 	if (typeof concurrentTasksLimit !== 'number')
 		throw new TypeError('concurrentTasksLimit argument must be a Number');
 	if (typeof action !== 'function')

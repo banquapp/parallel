@@ -17,9 +17,9 @@ async function getRandomNumber(maxValue) {
 
 (async function main() {
 	const inputIterable = [1, 2, 3, 4, 5].values();
-	const conrurrentThreads = 2;
+	const concurrentThreads = 2;
 
-	const outputIterable = parallel(inputIterable, conrurrentThreads, getRandomNumber);
+	const outputIterable = parallel(inputIterable, concurrentThreads, getRandomNumber);
 
 	for await (const value of outputIterable)
 		console.log(value);
